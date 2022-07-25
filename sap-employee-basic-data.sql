@@ -1,7 +1,7 @@
 CREATE TABLE `sap_employee_basic_data`
 (
             `EmployeeID`                      varchar(20) NOT NULL,
-            `ObjectID`                        varchar(70) DEFAULT NULL,
+            `ObjectID`                        varchar(70) NOT NULL,
             `ETag`                            varchar(80) DEFAULT NULL,
             `EmployeeUUID`                    varchar(80) DEFAULT NULL,
             `UserID`                          varchar(40) DEFAULT NULL,
@@ -47,6 +47,6 @@ CREATE TABLE `sap_employee_basic_data`
             `ChangedOn`                       varchar(80) DEFAULT NULL,
             `ChangedBy`                       varchar(480) DEFAULT NULL,
             `EntityLastChangedOn`             varchar(80) DEFAULT NULL,
-    PRIMARY KEY (`EmployeeID`)
+    PRIMARY KEY (`EmployeeID`, `ObjectID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;

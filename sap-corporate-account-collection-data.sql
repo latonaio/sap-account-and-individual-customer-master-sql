@@ -1,8 +1,8 @@
 CREATE TABLE `sap_corporate_account_collection_data`
 (
-			`ExternalID`                                 varchar(100) NOT NULL,    
-            `ObjectID`                                   varchar(70) DEFAULT NULL,
-			`AccountID`                                  varchar(10) DEFAULT NULL,
+            `ObjectID`                                   varchar(70) NOT NULL,
+			`AccountID`                                  varchar(10) NOT NULL,
+    		`ExternalID`                                 varchar(100) DEFAULT NULL,
 			`UUID`                                       varchar(80) DEFAULT NULL,
 			`ExternalSystem`                             varchar(32) DEFAULT NULL,
 			`RoleCode`                                   varchar(6) DEFAULT NULL,
@@ -93,6 +93,6 @@ CREATE TABLE `sap_corporate_account_collection_data`
             `ChangedByIdentityUUID`                      varchar(80) DEFAULT NULL,
             `EntityLastChangedOn`                        varchar(80) DEFAULT NULL,
             `ETag`                                       varchar(80) DEFAULT NULL,
-    PRIMARY KEY(`ExternalID`)
+    PRIMARY KEY(`ObjectID`, `AccountID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4

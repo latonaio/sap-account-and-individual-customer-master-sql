@@ -1,5 +1,4 @@
 # sap-account-and-individual-customer-master-sql
-
 sap-account-and-individual-customer-master-sql は、主にエッジアプリケーションにおいて、SAPと連携されたアカウント個人得意先マスタデータを保存するSQLテーブルを作成するためのレポジトリです。  
 sap-account-and-individual-customer-master-sql は、そのままクラウド環境におけるアプリケーションにも、適用可能です。   
 

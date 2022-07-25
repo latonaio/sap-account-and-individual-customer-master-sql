@@ -1,7 +1,7 @@
 CREATE TABLE `sap-contact-collection-data`
 (
+			`ObjectID`                              varchar(70) NOT NULL,
 			`ContactID`                             varchar(10) NOT NULL,
-			`ObjectID`                              varchar(70) DEFAULT NULL,
 			`ContactUUID`                           varchar(80) DEFAULT NULL,
 			`ExternalID`                            varchar(100) DEFAULT NULL,
 			`ExternalSystem`                        varchar(32) DEFAULT NULL,
@@ -80,6 +80,6 @@ CREATE TABLE `sap-contact-collection-data`
 			`NormalisedMobile`                      varchar(40) DEFAULT NULL,
 			`EntityLastChangedOn`                   varchar(80) DEFAULT NULL,
 			`ETag`                                  varchar(80) DEFAULT NULL,
-    PRIMARY KEY (`ContactID`)
+    PRIMARY KEY (`ObjectID`, `ContactID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;
