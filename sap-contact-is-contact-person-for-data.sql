@@ -1,9 +1,9 @@
-CREATE TABLE `sap_account_and_individual_customer_master_sql_contact_is_contact_person_for_data`
-(                       
+CREATE TABLE `sap_contact_is_contact_person_for_data`
+(       
+            `ContactID`               varchar(10) NOT NULL,                
             `ObjectID`                varchar(70) DEFAULT NULL,
             `ParentObjectID`          varchar(70) DEFAULT NULL,
-            `ETag`                    varchar(21) DEFAULT NULL,
-            `ContactID`               varchar(10) NOT NULL,
+            `ETag`                    varchar(80) DEFAULT NULL,
             `AccountID`               varchar(10) DEFAULT NULL,
             `AccountFormattedName`    varchar(480) DEFAULT NULL,
             `ReverseMainIndicator`    tinyint(1) DEFAULT NULL,  
@@ -25,9 +25,9 @@ CREATE TABLE `sap_account_and_individual_customer_master_sql_contact_is_contact_
             `Phone`                   varchar(40) DEFAULT NULL,
             `BestReachedByCode`       varchar(3) DEFAULT NULL,
             `BestReachedByCodeText`   varchar(80) DEFAULT NULL,
-            `OrganisationAddressUUID` varchar(36) DEFAULT NULL,
-            `EntityLastChangedOn`     varchar(21) DEFAULT NULL,        
-    PRIMARY KEY(`ContactID`)
+            `OrganisationAddressUUID` varchar(80) DEFAULT NULL,
+            `EntityLastChangedOn`     varchar(80) DEFAULT NULL,        
+    PRIMARY KEY(`ContactID`),
     CONSTRAINT `SAPAccountAndIndividualCustomerMasterContactIsContactPersonForData` FOREIGN KEY (`ContactID`) REFERENCES `sap_contact_collection_data` (`ContactID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4  

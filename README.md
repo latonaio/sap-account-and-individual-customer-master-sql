@@ -14,9 +14,12 @@ https://api.sap.com/api/customer/overview
 sap-account-and-individual-customer-master-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
 * sap-contact-collection-data.sql（SAP アカウント個人得意先マスタ - コンタクト）  
+* sap-contact-is-contact-person-for-data.sql（SAP アカウント個人得意先マスタ - コンタクトパーソン） 
 * sap-corporate-account-collection-data.sql（SAP アカウント個人得意先マスタ - 会社アカウント）  
 * sap-employee-basic-data.sql（SAP アカウント個人得意先マスタ - 従業員ベーシックデータ）  
-* sap-account-and-individual-customer-master-sql-contact-is-contact-person-for-data.sql（SAP アカウント個人得意先マスタ - コンタクトパーソン）  
+* sap-individual-customer-collection-data.sql（SAP アカウント個人得意先マスタ - 個人顧客データ）  
+* sap-individual-customer-adress-data.sql（SAP アカウント個人得意先マスタ - 個人顧客アドレスデータ）  
+
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法  
 
