@@ -1,4 +1,4 @@
-CREATE TABLE `sap_individual_customer_collection_data`
+CREATE TABLE `sap_account_and_individual_customer_master_data`
 (
 			`ObjectID`                         varchar(70) NOT NULL,
 		    `CustomerID`                       varchar(10) NOT NULL,
@@ -104,6 +104,6 @@ CREATE TABLE `sap_individual_customer_collection_data`
             `EntityLastChangedOn`              varchar(21) DEFAULT NULL,
             `ETag`                             varchar(21) DEFAULT NULL,
             `Mul1`                             varchar(80) DEFAULT NULL,
-    PRIMARY KEY (`ObjectID`)
+    PRIMARY KEY (`ObjectID`, `CustomerID`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

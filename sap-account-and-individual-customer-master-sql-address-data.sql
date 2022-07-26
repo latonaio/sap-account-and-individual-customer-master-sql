@@ -1,4 +1,4 @@
-CREATE TABLE `sap_individual_customer_adress_data`
+CREATE TABLE `sap_account_and_individual_customer_master_address_data`
 (
 			`ObjectID`                                    varchar(70) NOT NULL,
 		    `CustomerID`                                  varchar(10) NOT NULL,
@@ -60,6 +60,6 @@ CREATE TABLE `sap_individual_customer_adress_data`
 			`BestReachedByCodeText`                       varchar(80) DEFAULT NULL,
 			`ETag`                                        varchar(80) DEFAULT NULL,
     PRIMARY KEY(`ObjectID`, `CustomerID`),
-    CONSTRAINT `SAPAccountAndIndividualCustomerMasterIndividualCustomerAccountData` FOREIGN KEY (`ObjectID`) REFERENCES `sap_individual_customer_collection_data` (`ObjectID`)
+    CONSTRAINT `SAPAccountAndIndividualCustomerMasterAddressData` FOREIGN KEY (`ObjectID`) REFERENCES `sap_account_and_individual_customer_master_data` (`ObjectID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4
